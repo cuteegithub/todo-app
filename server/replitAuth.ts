@@ -27,10 +27,10 @@ export function getSession() {
 const demoUsers = [
   {
     id: "sindhuja-user-1",
-    email: "sindhuja@taskflow.com",
+    email: "sindhuja.sharma@taskflow.com",
     firstName: "Sindhuja",
     lastName: "Sharma",
-    profileImageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sindhuja&backgroundColor=b6e3f4&clothesColor=262e33&topType=LongHairStraight&accessoriesType=Prescription02&hatColor=PastelBlue&hairColor=BrownDark&facialHairType=Blank&clothesType=BlazerShirt&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Light"
+    profileImageUrl: "https://api.dicebear.com/7.x/adventurer/svg?seed=Sindhuja&backgroundColor=b6e3f4&clothesColor=8b5cf6&topType=shortHair&accessoriesType=sunglasses&hatColor=f59e0b&hairColor=8b5a2b&eyeType=happy&eyebrowType=raised&mouthType=smile&skinColor=f3d2a7"
   }
 ];
 
@@ -44,6 +44,52 @@ export async function setupAuth(app: Express) {
     
     // Create user in storage
     await storage.upsertUser(demoUser);
+    
+    // Add some sample tasks for the demo user if they don't exist
+    const existingTasks = await storage.getUserTasks(demoUser.id);
+    if (existingTasks.length === 0) {
+      const sampleTasks = [
+        {
+          title: "Morning skincare routine",
+          description: "Complete 7-step skincare routine with cleanser, toner, serum, and moisturizer",
+          dueDate: new Date(Date.now() + 1000 * 60 * 60 * 24), // Tomorrow
+          status: "open",
+          priority: "high"
+        },
+        {
+          title: "Study session - Web Development",
+          description: "Complete React tutorial chapter 3-5, practice building components",
+          dueDate: new Date(Date.now() + 1000 * 60 * 60 * 48), // Day after tomorrow
+          status: "open",
+          priority: "high"
+        },
+        {
+          title: "Yoga and meditation",
+          description: "20 minutes yoga followed by 10 minutes mindfulness meditation",
+          dueDate: new Date(Date.now() + 1000 * 60 * 60 * 6), // 6 hours from now
+          status: "open",
+          priority: "medium"
+        },
+        {
+          title: "Plan weekend outfit",
+          description: "Choose outfit for college fest, coordinate accessories and shoes",
+          dueDate: new Date(Date.now() + 1000 * 60 * 60 * 72), // 3 days
+          status: "open",
+          priority: "low"
+        },
+        {
+          title: "Call bestie",
+          description: "Catch up with Priya about her internship updates and weekend plans",
+          dueDate: new Date(Date.now() + 1000 * 60 * 60 * 12), // 12 hours
+          status: "completed",
+          priority: "medium"
+        }
+      ];
+      
+      for (const task of sampleTasks) {
+        await storage.createTask(demoUser.id, task);
+      }
+    }
     
     // Set session
     req.session.user = {

@@ -64,6 +64,7 @@ export default function Profile() {
             <h1 className="text-2xl font-bold text-gray-900 mb-1">
               {(user as UserType).firstName} {(user as UserType).lastName}
             </h1>
+            <p className="text-sm text-gray-500 mb-2">Welcome back! ✨</p>
             
             <div className="flex items-center justify-center text-gray-600 mb-2">
               <Mail className="h-4 w-4 mr-2" />
@@ -121,6 +122,33 @@ export default function Profile() {
           </CardContent>
         </Card>
 
+        {/* Personal Info */}
+        <Card className="border-0 shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-lg font-semibold text-gray-900">About Me</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6 pt-0">
+            <div className="space-y-3 text-sm text-gray-600">
+              <div className="flex items-center">
+                <span className="w-16 text-gray-500">Role:</span>
+                <span>Student & Creative</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-16 text-gray-500">Location:</span>
+                <span>Bangalore, India</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-16 text-gray-500">Interests:</span>
+                <span>Art, Music, Tech, Fitness</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-16 text-gray-500">Goals:</span>
+                <span>Stay organized & productive</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Activity Badges */}
         <Card className="border-0 shadow-lg">
           <CardHeader>
@@ -129,28 +157,33 @@ export default function Profile() {
           <CardContent className="p-6 pt-0">
             <div className="flex flex-wrap gap-2">
               {tasks.length >= 5 && (
-                <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-blue-200">
-                  Task Creator
+                <Badge variant="secondary" className="bg-pink-100 text-pink-700 border-pink-200">
+                  ✨ Task Creator
                 </Badge>
               )}
               {completedTasks.length >= 3 && (
                 <Badge variant="secondary" className="bg-green-100 text-green-700 border-green-200">
-                  Goal Achiever
+                  🎯 Goal Achiever
                 </Badge>
               )}
               {tasks.length >= 10 && (
                 <Badge variant="secondary" className="bg-purple-100 text-purple-700 border-purple-200">
-                  Super Organizer
+                  👑 Super Organizer
                 </Badge>
               )}
               {highPriorityTasks.length >= 2 && (
                 <Badge variant="secondary" className="bg-orange-100 text-orange-700 border-orange-200">
-                  Priority Master
+                  🔥 Priority Master
+                </Badge>
+              )}
+              {completedTasks.length >= 1 && (
+                <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-blue-200">
+                  💪 Go-Getter
                 </Badge>
               )}
               {tasks.length === 0 && (
                 <Badge variant="outline" className="text-gray-500">
-                  Getting Started
+                  🌱 Getting Started
                 </Badge>
               )}
             </div>
