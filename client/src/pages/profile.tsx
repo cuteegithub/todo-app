@@ -158,39 +158,82 @@ export default function Profile() {
         </Card>
 
         {/* Background Profile */}
-        <Card className="border-0 shadow-lg">
-          <CardHeader>
+        <Card className="border-0 shadow-lg overflow-hidden">
+          {/* Background Image */}
+          <div className="h-32 bg-gradient-to-r from-blue-500 to-purple-600 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=200&q=80"
+              alt="University campus background"
+              className="w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80"></div>
+            <div className="absolute bottom-4 left-6 text-white">
+              <h3 className="text-lg font-semibold">Professional Background</h3>
+              <p className="text-sm opacity-90">Computer Science @ IIT Bangalore</p>
+            </div>
+          </div>
+          
+          <CardHeader className="pb-3">
             <CardTitle className="text-lg font-semibold text-gray-900">Background</CardTitle>
           </CardHeader>
           <CardContent className="p-6 pt-0">
             <div className="space-y-4 text-sm text-gray-600">
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Education</h4>
-                <p>Currently pursuing BTech in Computer Science at Indian Institute of Technology, Bangalore. Maintaining excellent academic performance with focus on software engineering principles and modern development practices.</p>
-              </div>
-              
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Experience</h4>
-                <p>Active in coding competitions and hackathons. Completed internships in web development and contributed to open-source projects. Strong foundation in full-stack development with React, Node.js, and Python.</p>
-              </div>
-              
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Skills</h4>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <Badge variant="outline" className="text-xs">JavaScript</Badge>
-                  <Badge variant="outline" className="text-xs">React</Badge>
-                  <Badge variant="outline" className="text-xs">Python</Badge>
-                  <Badge variant="outline" className="text-xs">Node.js</Badge>
-                  <Badge variant="outline" className="text-xs">SQL</Badge>
-                  <Badge variant="outline" className="text-xs">Git</Badge>
-                  <Badge variant="outline" className="text-xs">UI/UX Design</Badge>
-                  <Badge variant="outline" className="text-xs">Machine Learning</Badge>
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900 mb-2">Education</h4>
+                  <p>Currently pursuing BTech in Computer Science at Indian Institute of Technology, Bangalore. Maintaining excellent academic performance with focus on software engineering principles and modern development practices.</p>
                 </div>
               </div>
               
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Goals</h4>
-                <p>Aspiring to become a software engineer with expertise in building scalable web applications. Passionate about creating user-centered solutions and contributing to impactful technology projects.</p>
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd"/>
+                    <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900 mb-2">Experience</h4>
+                  <p>Active in coding competitions and hackathons. Completed internships in web development and contributed to open-source projects. Strong foundation in full-stack development with React, Node.js, and Python.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900 mb-2">Skills</h4>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <Badge variant="outline" className="text-xs">JavaScript</Badge>
+                    <Badge variant="outline" className="text-xs">React</Badge>
+                    <Badge variant="outline" className="text-xs">Python</Badge>
+                    <Badge variant="outline" className="text-xs">Node.js</Badge>
+                    <Badge variant="outline" className="text-xs">SQL</Badge>
+                    <Badge variant="outline" className="text-xs">Git</Badge>
+                    <Badge variant="outline" className="text-xs">UI/UX Design</Badge>
+                    <Badge variant="outline" className="text-xs">Machine Learning</Badge>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900 mb-2">Goals</h4>
+                  <p>Aspiring to become a software engineer with expertise in building scalable web applications. Passionate about creating user-centered solutions and contributing to impactful technology projects.</p>
+                </div>
               </div>
             </div>
           </CardContent>
