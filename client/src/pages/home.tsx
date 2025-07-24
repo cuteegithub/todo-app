@@ -9,7 +9,7 @@ import AddTaskModal from "@/components/add-task-modal";
 import FloatingActionButton from "@/components/floating-action-button";
 import BottomNavigation from "@/components/bottom-navigation";
 import PullToRefresh from "@/components/pull-to-refresh";
-import { Calendar } from "@/components/calendar";
+import { CompactCalendar } from "@/components/compact-calendar";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { Task } from "@shared/schema";
 
@@ -156,12 +156,7 @@ export default function Home() {
             tasks={tasks}
           />
 
-          {/* Calendar Section */}
-          <div className="px-4 py-2">
-            <Calendar tasks={tasks || []} />
-          </div>
-
-          {/* Main Content */}
+          {/* Main Content - Tasks First */}
           <main className="flex-1 overflow-y-auto pb-24">
             <div className="px-4 py-2">
               {isLoading ? (
@@ -246,6 +241,29 @@ export default function Home() {
                             <TaskItem task={task} />
                           </div>
                         ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Compact Calendar Section - After Tasks */}
+                  {!isLoading && (
+                    <div className="mt-8 mb-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-text-primary font-medium text-lg flex items-center">
+                          <svg className="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                          </svg>
+                          Calendar View
+                        </h3>
+                        <button 
+                          className="text-primary text-sm font-medium hover:text-primary-dark transition-colors"
+                          onClick={() => window.location.href = '/calendar'}
+                        >
+                          View Full Calendar →
+                        </button>
+                      </div>
+                      <div className="bg-white rounded-lg border border-gray-200 p-4">
+                        <CompactCalendar tasks={tasks || []} />
                       </div>
                     </div>
                   )}
