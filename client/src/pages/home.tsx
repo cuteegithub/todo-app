@@ -9,6 +9,7 @@ import AddTaskModal from "@/components/add-task-modal";
 import FloatingActionButton from "@/components/floating-action-button";
 import BottomNavigation from "@/components/bottom-navigation";
 import PullToRefresh from "@/components/pull-to-refresh";
+import { Calendar } from "@/components/calendar";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { Task } from "@shared/schema";
 
@@ -153,6 +154,11 @@ export default function Home() {
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
           />
+
+          {/* Calendar Section */}
+          <div className="px-4 py-2">
+            <Calendar tasks={tasks || []} />
+          </div>
 
           {/* Main Content */}
           <main className="flex-1 overflow-y-auto pb-24">
