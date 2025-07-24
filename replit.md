@@ -1,8 +1,8 @@
-# TaskFlow - Mobile Task Management Application
+# Todo App - Mobile Task Management Application
 
 ## Overview
 
-TaskFlow is a mobile-first task management application built as part of a hackathon project. The application provides a complete full-stack solution with demo authentication, full CRUD operations for tasks, and a responsive mobile interface optimized for touch interactions. Successfully completed with all hackathon requirements met.
+Todo App is a mobile-first task management application built as part of a hackathon project. The application provides a complete full-stack solution with demo authentication, full CRUD operations for tasks, and a responsive mobile interface optimized for touch interactions. Successfully completed with all hackathon requirements met.
 
 ## Recent Changes (July 24, 2025)
 
