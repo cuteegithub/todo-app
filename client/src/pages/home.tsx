@@ -153,6 +153,7 @@ export default function Home() {
             onFilterChange={setFilter}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
+            tasks={tasks}
           />
 
           {/* Calendar Section */}
@@ -207,19 +208,21 @@ export default function Home() {
                 <div>
                   {/* Today's Tasks */}
                   {todayTasks.length > 0 && (
-                    <div className="mb-6">
+                    <div className="mb-6 animate-fadeIn">
                       <h3 className="text-text-primary font-medium text-lg mb-3 flex items-center">
                         <svg className="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
                         Today's Tasks
-                        <span className="ml-2 bg-primary text-white text-xs px-2 py-1 rounded-full">
+                        <span className="ml-2 bg-primary text-white text-xs px-2 py-1 rounded-full animate-pulse">
                           {todayTasks.length}
                         </span>
                       </h3>
                       <div className="space-y-3">
-                        {todayTasks.map((task) => (
-                          <TaskItem key={task.id} task={task} />
+                        {todayTasks.map((task, index) => (
+                          <div key={task.id} className="animate-slideInUp" style={{ animationDelay: `${index * 50}ms` }}>
+                            <TaskItem task={task} />
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -227,19 +230,21 @@ export default function Home() {
 
                   {/* Upcoming Tasks */}
                   {upcomingTasks.length > 0 && (
-                    <div className="mb-6">
+                    <div className="mb-6 animate-fadeIn">
                       <h3 className="text-text-primary font-medium text-lg mb-3 flex items-center">
                         <svg className="w-5 h-5 text-text-secondary mr-2" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
                         </svg>
                         {todayTasks.length > 0 ? "Upcoming" : "All Tasks"}
-                        <span className="ml-2 bg-text-secondary text-white text-xs px-2 py-1 rounded-full">
+                        <span className="ml-2 bg-text-secondary text-white text-xs px-2 py-1 rounded-full animate-pulse">
                           {upcomingTasks.length}
                         </span>
                       </h3>
                       <div className="space-y-3">
-                        {upcomingTasks.map((task) => (
-                          <TaskItem key={task.id} task={task} />
+                        {upcomingTasks.map((task, index) => (
+                          <div key={task.id} className="animate-slideInUp" style={{ animationDelay: `${index * 50 + todayTasks.length * 50}ms` }}>
+                            <TaskItem task={task} />
+                          </div>
                         ))}
                       </div>
                     </div>
