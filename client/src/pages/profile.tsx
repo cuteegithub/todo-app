@@ -157,6 +157,45 @@ export default function Profile() {
           </CardContent>
         </Card>
 
+        {/* Background Profile */}
+        <Card className="border-0 shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-lg font-semibold text-gray-900">Background</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6 pt-0">
+            <div className="space-y-4 text-sm text-gray-600">
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Education</h4>
+                <p>Currently pursuing BTech in Computer Science at Indian Institute of Technology, Bangalore. Maintaining excellent academic performance with focus on software engineering principles and modern development practices.</p>
+              </div>
+              
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Experience</h4>
+                <p>Active in coding competitions and hackathons. Completed internships in web development and contributed to open-source projects. Strong foundation in full-stack development with React, Node.js, and Python.</p>
+              </div>
+              
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Skills</h4>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Badge variant="outline" className="text-xs">JavaScript</Badge>
+                  <Badge variant="outline" className="text-xs">React</Badge>
+                  <Badge variant="outline" className="text-xs">Python</Badge>
+                  <Badge variant="outline" className="text-xs">Node.js</Badge>
+                  <Badge variant="outline" className="text-xs">SQL</Badge>
+                  <Badge variant="outline" className="text-xs">Git</Badge>
+                  <Badge variant="outline" className="text-xs">UI/UX Design</Badge>
+                  <Badge variant="outline" className="text-xs">Machine Learning</Badge>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Goals</h4>
+                <p>Aspiring to become a software engineer with expertise in building scalable web applications. Passionate about creating user-centered solutions and contributing to impactful technology projects.</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Activity Badges */}
         <Card className="border-0 shadow-lg">
           <CardHeader>
