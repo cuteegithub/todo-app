@@ -27,10 +27,10 @@ export function getSession() {
 const demoUsers = [
   {
     id: "sindhuja-user-1",
-    email: "sindhuja.sharma@taskflow.com",
+    email: "sindhuja@taskflow.com",
     firstName: "Sindhuja",
-    lastName: "Sharma",
-    profileImageUrl: "https://api.dicebear.com/7.x/adventurer/svg?seed=Sindhuja&backgroundColor=b6e3f4&clothesColor=8b5cf6&topType=shortHair&accessoriesType=sunglasses&hatColor=f59e0b&hairColor=8b5a2b&eyeType=happy&eyebrowType=raised&mouthType=smile&skinColor=f3d2a7"
+    lastName: "",
+    profileImageUrl: "https://api.dicebear.com/7.x/adventurer-neutral/svg?seed=Sindhuja&backgroundColor=ffdfbf&clothesColor=d084a0&topType=longHair&accessoriesType=none&hatColor=ffffff&hairColor=4a312c&eyeType=happy&eyebrowType=default&mouthType=smile&skinColor=f3c7a8"
   }
 ];
 

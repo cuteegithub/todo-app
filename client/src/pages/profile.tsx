@@ -45,7 +45,10 @@ export default function Profile() {
   const highPriorityTasks = tasks.filter((task: Task) => task.priority === 'high');
 
   const getInitials = (firstName: string | null, lastName: string | null) => {
-    return `${firstName?.[0] || ''}${lastName?.[0] || ''}`.toUpperCase();
+    if (lastName && lastName.trim()) {
+      return `${firstName?.[0] || ''}${lastName?.[0] || ''}`.toUpperCase();
+    }
+    return `${firstName?.[0] || ''}${firstName?.[1] || ''}`.toUpperCase();
   };
 
   return (
@@ -62,7 +65,8 @@ export default function Profile() {
             </Avatar>
             
             <h1 className="text-2xl font-bold text-gray-900 mb-1">
-              {(user as UserType).firstName} {(user as UserType).lastName}
+              {(user as UserType).firstName}
+              {(user as UserType).lastName && (user as UserType).lastName!.trim() && ` ${(user as UserType).lastName}`}
             </h1>
             <p className="text-sm text-gray-500 mb-2">Welcome back! ✨</p>
             
