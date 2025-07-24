@@ -1,0 +1,67 @@
+Hackathon Task: Todo Task Management Mobile 
+Application 
+Objective 
+Develop a cross-platform Todo Task Management Mobile App that enables users to 
+log in via social accounts (Google, GitHub, Facebook) and manage personal tasks on 
+the go. The app should support full CRUD operations on tasks, with fields like title, 
+description, due date, status, and priority. The UI should be clean, intuitive, and 
+responsive for both Android and iOS. Secure API integration with proper 
+authentication and offline support is expected.  
+Tech Stack 
+Backend 
+Mobile App 
+Any / Optional 
+Flutter or React Native 
+Authentication 
+Google, Apple, X, Facebook (Any One) 
+Scope & Requirements 
+1. Onboarding & Authentication 
+● Implement a social login flow using one provider (Google, Apple, Facebook, 
+X/Twitter, etc.). 
+● Show appropriate error states on login failure. 
+2. Task Management 
+● Support full in-app CRUD operations: Create, Read (List), Update, Mark as 
+Complete, and Delete tasks. 
+● Task fields include: title, description, due date, status (open/complete). 
+● Store task data in local state for the session 
+3. User Experience 
+● Use intuitive UI components such as: 
+○ Tabs, filters, and search to find tasks. 
+○ No data states when there are no tasks to show. 
+○ Floating Action Button (FAB) or equivalent for adding tasks. 
+● Add smooth animations for list interactions (e.g., insertion, deletion, 
+completion). 
+4. Polish & Extras 
+● Implement pull-to-refresh and/or swipe-to-delete for better UX 
+● Integrate crash reporting using any method you’re comfortable with (e.g., 
+Sentry, Firebase Crashlytics). 
+In your submission, you must 
+1. Create a public repository in github and add a README.md file to follow the 
+instructions and do the setup  
+2. Need the working APK 
+3. Add a line “This project is a part of a hackathon run by 
+https://www.katomaran.com ” in your README.md file’s bottom 
+4. Assume anything you want which is not explicitly mentioned in the document 
+and mention your assumption in the README.md  
+5. Attach an architecture diagram of your app along with your submission  
+6. Add a loom video(or similar) link in the README.md file where you explain 
+and demonstrate your working app  
+7. Additional Instructions  
+○ Use a proven design pattern to develop the app 
+○ Your code must be structured, modular, scalable and well-named.  
+○ Good looking user interfaces will be valued very highly.  
+○ You will be asked to run the code and explain the application in your 
+final round of interview.  
+○ Although we would recommend everyone to follow the instructions 
+above, you may decide to ignore a few for an innovative reason, but you 
+must ensure your submission is good so you get a chance in the next 
+round to explain it to us.  
+○ Use of AI tools like ChatGPT, Replit, Lovable or cursor etc., is 
+encouraged and if used, please ensure you retain the prompting you 
+have done to be displayed during the next round of interview. 
+○ Early submission will yield extra advantage 
+8. You have 48 hours from receipt of this brief to complete and submit your 
+repository link. Submit your github repository in the google form on or before 
+12 PM Friday, July 25th, 2025 
+We look forward to seeing your craftsmanship — from design to development — and 
+hearing you explain your implementation choices in the interview.
