@@ -134,20 +134,24 @@ export default function Profile() {
           <CardContent className="p-6 pt-0">
             <div className="space-y-3 text-sm text-gray-600">
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Role:</span>
-                <span>Student & Creative</span>
+                <span className="w-20 text-gray-500">Role:</span>
+                <span>Computer Science Student</span>
               </div>
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Location:</span>
-                <span>Bangalore, India</span>
+                <span className="w-20 text-gray-500">University:</span>
+                <span>IIT Bangalore</span>
               </div>
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Interests:</span>
-                <span>Art, Music, Tech, Fitness</span>
+                <span className="w-20 text-gray-500">Specialization:</span>
+                <span>Software Engineering</span>
               </div>
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Goals:</span>
-                <span>Stay organized & productive</span>
+                <span className="w-20 text-gray-500">Year:</span>
+                <span>3rd Year BTech</span>
+              </div>
+              <div className="flex items-center">
+                <span className="w-20 text-gray-500">Interests:</span>
+                <span>Web Dev, AI/ML, UI/UX</span>
               </div>
             </div>
           </CardContent>

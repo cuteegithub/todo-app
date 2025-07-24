@@ -30,7 +30,7 @@ const demoUsers = [
     email: "sindhuja@taskflow.com",
     firstName: "Sindhuja",
     lastName: "",
-    profileImageUrl: "https://api.dicebear.com/7.x/adventurer-neutral/svg?seed=Sindhuja&backgroundColor=ffdfbf&clothesColor=d084a0&topType=longHair&accessoriesType=none&hatColor=ffffff&hairColor=4a312c&eyeType=happy&eyebrowType=default&mouthType=smile&skinColor=f3c7a8"
+    profileImageUrl: "https://api.dicebear.com/7.x/lorelei/svg?seed=Sindhuja&backgroundColor=f1f5f9&clothesColor=1e293b&hairColor=2d1b14&eyeType=default&mouthType=smile&skinColor=f3c7a8&flip=false"
   }
 ];
 
