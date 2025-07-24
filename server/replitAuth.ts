@@ -26,25 +26,11 @@ export function getSession() {
 // Demo users for hackathon
 const demoUsers = [
   {
-    id: "demo-user-1",
-    email: "demo@hackathon.com",
-    firstName: "Demo",
-    lastName: "User",
-    profileImageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Demo"
-  },
-  {
-    id: "demo-user-2", 
-    email: "jane@example.com",
-    firstName: "Jane",
-    lastName: "Smith",
-    profileImageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jane"
-  },
-  {
-    id: "demo-user-3",
-    email: "john@test.com", 
-    firstName: "John",
-    lastName: "Doe",
-    profileImageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=John"
+    id: "sindhuja-user-1",
+    email: "sindhuja@taskflow.com",
+    firstName: "Sindhuja",
+    lastName: "Sharma",
+    profileImageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sindhuja&backgroundColor=b6e3f4&clothesColor=262e33&topType=LongHairStraight&accessoriesType=Prescription02&hatColor=PastelBlue&hairColor=BrownDark&facialHairType=Blank&clothesType=BlazerShirt&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Light"
   }
 ];
 
